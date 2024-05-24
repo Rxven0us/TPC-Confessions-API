@@ -15,49 +15,47 @@
         </div>
     </header>
 
-    <body>
-        <div class="box-1">
-            <h2>Submit a Confession</h2>
-        </div>
-        
-        <div class="container">
-            <form class="my-form" id="postform">
-                <div class="form-group">
-                    <label for="">Roll Number</label>
-                    <input type="text" name="roll_no" placeholder="Who's the one???">
-                </div>
-                <div class="form-group">
-                    <label for="">Confession</label>
-                    <textarea name="confession" id="" , placeholder="Write your confession"></textarea>
-                </div>
-                <button class="button" type="submit">Submit</button>
-            </form>
-        </div>
+    <div class="box-1">
+        <h2>Submit a Confession</h2>
+    </div>
 
-        <div class="box-1">
-            <h2>See Confessions</h2>
-        </div>
+    <div class="container">
+        <form class="my-form" id="postform">
+            <div class="form-group">
+                <label for="">Roll Number</label>
+                <input type="text" name="roll_no" placeholder="Who's the one???">
+            </div>
+            <div class="form-group">
+                <label for="">Confession</label>
+                <textarea name="confession" id="" , placeholder="Write your confession"></textarea>
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </div>
 
-        
-        <div class="container">
-            <form class="my-form" id="getform">
-                <div class="form-group">
-                    <label for="">Roll Number</label>
-                    <input type="text" name="roll_no" placeholder="Enter roll number">
-                </div>
-                <button class="button" type="submit">Submit</button>
-            </form>
-        </div>
-        
-        <div class="box-1" id="conlist">
-            <em>You are the {CSS} to my &lt;&#8725;HTML&gt;...</em>
-            <ul></ul>
+    <div class="box-1">
+        <h2>See Confessions</h2>
+    </div>
 
-        </div>
-    
-        <script src="confession.js">
-        </script>
-    </body>
+
+    <div class="container">
+        <form class="my-form" id="getform">
+            <div class="form-group">
+                <label for="">Roll Number</label>
+                <input type="text" name="roll_no" placeholder="Enter roll number">
+            </div>
+            <button class="button" type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="box-1" id="conlist">
+        <em>You are the {CSS} to my &lt;&#8725;HTML&gt;...</em>
+        <ul id="confbullets"></ul>
+
+    </div>
+
+    <script src="confession.js">
+    </script>
 </body>
 
 </html>
