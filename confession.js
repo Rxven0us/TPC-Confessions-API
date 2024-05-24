@@ -24,9 +24,12 @@ const formGet = document.getElementById("getform")
 formGet.addEventListener('submit', event => {
     event.preventDefault();
     const formData = new FormData(formGet);
-    const data = Object.fromEntries(formData);
+    const data = Object.fromEntries(formData.entries());
     
-    document.getElementById('conlist').innerHTML = `<h2>Confessions for ${data.roll_no}...</h2>`;
+    const list = document.getElementById('conlist');
+    if(list){
+        list.innerHTML = `<h2>Confessions for ${data.roll_no}...</h2> <ul></ul>`;
+    }
 
     const apiUrl = 'https://tpcconfessions.onrender.com/api/getConfession';
     const queryString = new URLSearchParams({ roll_no: data.roll_no }).toString();
@@ -35,8 +38,8 @@ formGet.addEventListener('submit', event => {
         .then((response) => { return response.json() })
         .then((data) => {
             console.log(data);
-            data.forEach(confession => {
-                const conf = `<li>${confession.confession}</li>`
+            data.forEach(response => {
+                const conf = `<li>${response.confession}</li>`
                 document.querySelector('ul').insertAdjacentHTML('beforeend', conf);
             })
         })
